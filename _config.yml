@@ -1,205 +1,389 @@
-# =======================================#
-# -----------DUMBARTON THEME-------------#
-# ----------------By: Tyler Butler-------#
-#-----------------https://tbutler.org----#
-#========================================#
+# -----------------------------------------------------------------------------
+# Site settings
+# -----------------------------------------------------------------------------
 
-# =======================================#
-# -----------BASE SETTINGS---------------#
-#========================================#
+title: blank # the website title (if blank, full name will be used instead)
+first_name: You
+middle_name: R.
+last_name: Name
+email: you@example.com
+description: > # the ">" symbol means to ignore newlines until "footer_text:"
+  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
-title: Dumbarton 
-email: 
-description: a minimalistic jekyll theme for academics
-baseurl:                                       # the subpath of your site, e.g. /blog
-url: "https://dumbarton.netlify.app/"          # the base hostname & protocol for your site, e.g. http://example.com
-image: /assets/img/dumbarton.png               # used to generate site link preview
-image_alt: A minimalistic jekyll theme for academic    # image description
+lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-# =======================================#
-# -----------SITE SETTINGS---------------#
-#========================================#: 
-author: John Doe 
-profile_image: /assets/img/avatar/cropped.png #/assets/img/avatar/avatar.jpeg 
-occupation: 
-snippet:
-twitter: tbutler0x90
-github: tcbutler320
-linkedin: tyler-b-a700a1aa
-stackoverflow: '12935605'
-website: https://tbutler.org
-codepen: 
-medium: 
-email: developer.tbutler@gmail.com
-keybase: tbutler320
-pgp: 
-ctftime: 
-phonenumber: 
+url: https://alshedivat.github.io # the base hostname & protocol for your site
+baseurl: /al-folio # the subpath of your site, e.g. /blog/
+last_updated: false # set to true if you want to display last updated in the footer
+impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
-#========================================#
-# --------- UI THEMES -------------------#
-#========================================#
-ui_theme: abyss                                 # Create your own theme by setting options in _data/themes.yml
+# -----------------------------------------------------------------------------
+# Theme
+# -----------------------------------------------------------------------------
 
+# code highlighter theme
+highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
 
-# =======================================#
-# -----------BLOG SETTINGS---------------#
-#========================================#
+# repo color theme
+repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_trophies:
+  enabled: true
+  theme_light: flat    # https://github.com/ryo-ma/github-profile-trophy
+  theme_dark: gitdimmed  # https://github.com/ryo-ma/github-profile-trophy
 
-tags:  post jekyll styleguide ipsum
-twitter-widget: false # true,false                  # Used to show your twitter timeline on blog home page
+# -----------------------------------------------------------------------------
+# RSS Feed
+# -----------------------------------------------------------------------------
+# will use title and url fields
+# Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-comments: false                                     # Used to enable comments on blog posts
-gitalk_client_id:             
-gitalk_client_secret:    
-gitalk_repo:
-gitalk_owner: 
-gitalk_admin: 
-gitalk_distraction_mode: false
+rss_icon: true
 
-# =======================================#
-# -----------THEME SETTINGS--------------#
-#========================================#
+# -----------------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------------
 
-nav-color: "#00334e"                                 # options: light, dark, transparent, primary, custom | Change the color of the navbar
-footer-color: "#00334e"
-color-scheme: "#00334e"                              # options: demo | changes color scheme based on preset values 
-card-color: "#00334e"                                # Used on cards like the home highlights section
-nav-dIcon: "fas fa-caret-down"                       # Change the navbar dropdown (for mobile or small screen sizes) to any fontawesome icon. for a list of icons visit https://fontawesome.com/ 
-animate: true                                        # false or true, uses animate.css to animate certain functions
+navbar_fixed: true
+footer_fixed: true
 
-# =======================================#
-# -----------HOME PAGE  SETTINGS --------#
-#========================================#
-home_option: education                               # options: education, skills, timeline
+# Dimensions
+max_width: 800px
 
-# =======================================#          # These  settings are for demo purposes only, things like 
-# -----------HELP SETTINGS---------------#          #     popup toasts and tooltips designed to help new 
-#========================================#          #     developers as they look into using this theme      
-help_tips: false                                    # options: true, false  | use false to disable these for production mode
+# TODO: add layout settings (single page vs. multi-page)
 
+# -----------------------------------------------------------------------------
+# Open Graph & Schema.org
+# -----------------------------------------------------------------------------
+# Display links to the page with a preview object on social media.
+serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_schema_org: false # Include Schema.org in the HTML head
+og_image: # The site-wide (default for all links) Open Graph preview image
 
-# =======================================#
-# -----------BUILD SETTINGS--------------#
-#========================================#
-theme: 
+# -----------------------------------------------------------------------------
+# Social integration
+# -----------------------------------------------------------------------------
+
+github_username: # your GitHub user name
+gitlab_username: # your GitLab user name
+twitter_username: # your Twitter handle
+mastodon_username: # your mastodon instance+username in the format instance.tld/@username
+linkedin_username: # your LinkedIn user name
+telegram_username: # your Telegram user name
+scholar_userid: # your Google Scholar ID
+semanticscholar_id: # your Semantic Scholar ID
+whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
+orcid_id: # your ORCID ID
+medium_username: # your Medium username
+quora_username: # your Quora username
+publons_id: # your ID on Publons
+osf_id: # your OSF ID
+research_gate_profile: # your profile on ResearchGate
+blogger_url: # your blogger URL
+work_url: # work page URL
+keybase_username: # your keybase user name
+wikidata_id: # your wikidata id
+wikipedia_id: # your wikipedia id (Case sensitive)
+dblp_url: # your DBLP profile url
+stackoverflow_id: # your stackoverflow id
+kaggle_id: # your kaggle id
+lastfm_id: # your lastfm id
+spotify_id: # your spotify id
+pinterest_id: # your pinterest id
+unsplash_id: # your unsplash id
+instagram_id: # your instagram id
+facebook_id: # your facebook id
+youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
+discord_id: # your discord id (18-digit unique numerical identifier)
+
+contact_note: >
+  You can even add a little note about which of these is the best way to reach you.
+
+# -----------------------------------------------------------------------------
+# Analytics and search engine verification
+# -----------------------------------------------------------------------------
+
+google_analytics:  # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
+
+google_site_verification:  # your google-site-verification ID (Google Search Console)
+bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
+
+# -----------------------------------------------------------------------------
+# Blog
+# -----------------------------------------------------------------------------
+
+blog_name: al-folio # blog_name will be displayed in your blog page
+blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+blog_description: a simple whitespace theme for academics
+permalink: /blog/:year/:title/
+
+# Pagination
+pagination:
+  enabled: true
+
+related_blog_posts:
+  enabled: true
+  max_related: 5
+
+# Giscus comments (RECOMMENDED)
+# Follow instructions on https://giscus.app/ to setup for your repo to fill out
+# the information below.
+giscus:
+  repo: alshedivat/al-folio      # <your-github-user-name>/<your-github-repo-name>
+  repo_id: MDEwOlJlcG9zaXRvcnk2MDAyNDM2NQ==
+  category: Comments             # name of the category under which discussions will be created
+  category_id: DIC_kwDOA5PmLc4CTBt6
+  mapping: title                 # identify discussions by post title
+  strict: 1                      # use strict identification mode
+  reactions_enabled: 1           # enable (1) or disable (0) emoji reactions
+  input_position: bottom         # whether to display input form below (bottom) or above (top) the comments
+  theme: preferred_color_scheme  # name of the color scheme (preferred works well with al-folio light/dark mode)
+  emit_metadata: 0
+  lang: en
+
+# Disqus comments (DEPRECATED)
+disqus_shortname: al-folio # put your disqus shortname
+# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
+# External sources.
+# If you have blog posts published on medium.com or other exteranl sources,
+# you can display them in your blog by adding a link to the RSS feed.
+external_sources:
+  - name: medium.com
+    rss_url: https://medium.com/@al-folio/feed
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+news_limit: 5 # leave blank to include all the news in the `_news` folder
+
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
+
+# Markdown and syntax highlight
 markdown: kramdown
-
+highlighter: rouge
 kramdown:
-  syntax_highlighter: rouge
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
 
-plugins:
-  - jekyll-feed
-  - jekyll-scholar
-  - jekyll-environment-variables
-sass:
-  sass_dir: _sass
-  style: compressed
-
-
-include:
-  - _posts
-
+# Includes & excludes
+include: ['_pages']
 exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
+  - bin
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor
+keep_files:
+  - CNAME
+  - .nojekyll
+  - .git
 
-# =======================================#
-# -----JEKYLL SCHOLAR SETTINGS-----------#
-#========================================#
+# Plug-ins
+plugins:
+  - jekyll-archives
+  - jekyll-diagrams
+  - jekyll-email-protect
+  - jekyll-feed
+  - jekyll-imagemagick
+  - jekyll-minifier
+  - jekyll-paginate-v2
+  - jekyll/scholar
+  - jekyll-sitemap
+  - jekyll-link-attributes
+  - jekyll-twitter-plugin
+  - jemoji
+
+# Sitemap settings
+defaults:
+  - scope:
+      path: "assets/**/*.*"
+    values:
+      sitemap: false
+
+# -----------------------------------------------------------------------------
+# Jekyll Minifier
+# -----------------------------------------------------------------------------
+
+jekyll-minifier:
+  exclude: ['robots.txt']
+  uglifier_args:
+    harmony: true
+
+# -----------------------------------------------------------------------------
+# Jekyll Archives
+# -----------------------------------------------------------------------------
+
+jekyll-archives:
+  enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  layouts:
+    year: archive-year
+    tag: archive-tag
+    category: archive-category
+  permalinks:
+    year: '/blog/:year/'
+    tag: '/blog/tag/:name/'
+    category: '/blog/category/:name/'
+
+display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will be dispalyed on the front page of your blog
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
 scholar:
-  last_name: Dumbarton
+
+  last_name: [Einstein]
+  first_name: [Albert, A.]
+
   style: apa
   locale: en
+
   source: /_bibliography/
   bibliography: papers.bib
   bibliography_template: bib
+  # Note: if you have latex math in your bibtex, the latex filter
+  # preprocessing may conflict with MathJAX if the latter is enabled.
+  # See https://github.com/alshedivat/al-folio/issues/357.
+  bibtex_filters: [latex, smallcaps, superscript]
+
   replace_strings: true
   join_strings: true
+
   details_dir: bibliography
   details_layout: bibtex.html
-  details_link: 
+  details_link: Details
+
   query: "@*"
 
-# =======================================#
-# ------------CDN SETTINGS---------------#
-#-------------Used to generate icons-----#
-#========================================#
-font_awesome_id: 32a2b2a489                       # Register for free at https://fontawesome.com/ to get your id
+badges: # Display different badges for your pulications
+  altmetric_badge: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+  dimensions_badge: true # Dimensions badge (https://badge.dimensions.ai/)
+
+# Filter out certain bibtex entry keywords used internally from the bib output
+filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric]
+
+# Maximum number of authors to be shown for each publication (more authors are visible on click)
+max_author_limit: 3  # leave blank to always show all authors
+more_authors_animation_delay: 10  # more authors are revealed on click using animation; smaller delay means faster animation
 
 
-# =======================================#        # For more information about these settings, visit https://htmlhead.dev #
-# ------------META TAG SETTINGS----------#
-#========================================#
-google-site-verification:                         #<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
-yandex-verification:                              #<meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
-msvalidate:                                       # meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
-alexaVerifyID:                                    # <meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
-pinterestdomain_verify:                           #<meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
-norton-safeweb:                                   # <meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
-detectphone: yes                                  # yes or no. Disable automatic detection and formatting of possible phone numbers 
-x-dns-prefetch-control: on                        # on or off. Completely opt out of DNS prefetching by setting to "off"
-fbappid:                                          # Facebook OpenGraph 
+# -----------------------------------------------------------------------------
+# Jekyll Link Attributes
+# -----------------------------------------------------------------------------
+
+# These are the defaults
+external_links:
+  enabled: true
+  rel: external nofollow noopener
+  target: _blank
+  exclude:
 
 
+# -----------------------------------------------------------------------------
+# Responsive WebP Images
+# -----------------------------------------------------------------------------
+
+imagemagick:
+  enabled: true # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
+  widths:
+    - 480
+    - 800
+    - 1400
+  input_directories:
+    - assets/img/
+  input_formats:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".tiff"
+  output_formats:
+    webp: "-resize 800x"
+
+# -----------------------------------------------------------------------------
+# Jekyll Diagrams
+# -----------------------------------------------------------------------------
+
+jekyll-diagrams:
+    # configuration, see https://github.com/zhustec/jekyll-diagrams.
+    # feel free to comment out this section if not using jekyll diagrams.
 
 
-pgp-key: "-----BEGIN PGP PUBLIC KEY BLOCK-----
-mQINBF8SaxABEACxPxrYnHj8RlC7d1DyZDdlNREADaAEJDvWmILBWE4aYVOVyxSA
-yQ3gXYaOb0zoDR8r1tLtvDVfBtQKEK8KQWN8ZFQI/PAj2FVMtnqncFyIEwKXVOXO
-sgC3VKJBUvMXDChInXVUa4vs8varqLneTmAYi16bloLS1zL9Z7S CILbjSTUOyCz
-gmum8ea0IqFCqD8Lg2MSiWRax6F2HI/4RepgPCxzs51EhEkTMG80U3H8VxRlmpA5
-1gmUkhNaHSFujPPHI0k6ArnIrDiz/ouV3kESfGxDaOKedPZmxeWQtl7S2HEKXPrN
-ugeg1l8ny7Gh vIDnfbAjhMjHD0t0dXcW2lc77Le8IyXWfCqvAJvuB0DImV039KL
-cLRzbDa19L2C0dFTy2eKSyQOiQwhyu1JoxVW oLYeyCuL0Ptl4LRnlLbH9iYwCCs
-lx1piJ0YSDoSS2XJULNssJUO7wAejXua8t41gWuYqWZW1IE4Bvcox0H3sFh8tDG/
-jhJBg5E2Lwkg7LOWlBB9QFcnKk0qrIFZ2vtWUfrqr22iU7mStJ8b46Gttra8Nywl
-6rk0v/tPzMRwi3uHSCbcfzWgKOy8AyRI1Bwj9xAq7r9lYUe/eEXZeQMfJEYhq3Fu
-c3xVhMjKQO6r4Y2hmDmEesKHvOkKQ0q lY jt4zKUrXfQj0ebUtcqBtbWwARAQAB
-tCRUeWxlciBCdXRsZXIgPHRjYnV0bGVyMzIwQGdtYWlsLmNvbT6JAlQEEwEIAD4W
-IQTIZh5ulP tFioqo3V1ojT/iPmcGgUCXxJrEAIbAwUJB4YfgAULCQgHAgYVCgkI
-CwIEFgIDAQIeAQIXgAAKCRB1ojT/iPmcGi6XEACZPnJwRTSLesAows E gjIAk3E
-KQPCBjpH3XHln6SYNk3yy7RG6mNjYf5r6I2lfvcpbyvnuNszk/Am0Q2buU/ncEe/
-kAS2rtqeDkmroPwuE nWz/v /8uujsHujgS9xJngljGVNecFfjkENvAh4j163LPz
-iySahEbM6praHAZBQhC5lHpBi rrnOUk/q5Uk5kIfMvRWKVqAYARyMkyc6yy5chd
-JGsDtx51h62j1MxyrHFCxJ319iNh5EEKhEeyu7jfM2jWAp/PA eMfj7jAnhJeQJ0
-30Wrohg6LXnM7l2P12EY 9rcctIhe2xvM1nHhnqm8kiNCXHF3M755uhCxY4pygT4
-zM2UatcY3fFXlkvOvkFaLgTwD9scJZVnTM jo0m9/HjuXVsVr4IDmKFBWX5HhjAA
-ySXMObjuqXScy4mEg0QvfBSQsv40sVadWAGnsa5SHIXnSn8T22jNyiH7QhMG3LVr
-duAiXSWHs Y1FsTrV2J43fmG5Y/ZgbOitQPMQWft7SRoR4uqGBLA7z2xC2WSgHzt
-Vz EFvykiaX6LOpPo79Pt nx5DDMPhXucxHBdYcxl7wyD6CbU4vz/Nd5c0ZMdMXb
-eMAZ77LvmhPZOs7fbpJwKJAbviyc1b8M5SQir1s7cUfRcUSBmYoWHn55wO7bLmrt
-uAlOeI3W2K7e3/J LbkCDQRfEmsQARAAx9zAyPT3RMrr38Rz9sPaJoL8eVCf5rio
-xokBE7iBDl3r jDfLLFQX7nDkNwqAg vfVB6X0uL1JMokq0F4xoBjcz56eF9p4dG
-V5QieTLJsVz5glQ2jLkt/D7Sqi6AWi9vDT/w2EuKTHsE30Kp0kOLirEXhc 2h8Dv
-3P/TcJ8Rjl2W6QqFytQbkxulbe/PkHge75RNz/vG7jv859VRUX0XrYTC4iQGiAGj
-F0LW uVdX8cTTutmrvM yhY53Nk8/NRHYjOeF4fIomxX67EsGSwwFZu3aXClDklh
-7tXav1otuUwhODeWMSyBgE0X79wUrPBT6SpXFlmtYA0JyuHrlsTicQnUYkoGzfrF
-MSPOY9mU2eXgiFrVwYeD2j2G4KG9jNUcQguSjzA3vEpZK9NtTukj3HzQkttGLBb8
-if7DtNxHhrkpmHqOzM55c4QbKBvGAFDwqocn0uH0N7qt8I1vC9W4KH//DxSbpZdY
-SFpuYdaXCORaAX0VEGMikdChV6k26EjHprPoIQJ7clJjlEiGaOtp IKoGgnOXMF5
-6B8Spm7JJ8sULobDDNNvRgstjmABJoLJDa0kPs9WkIJXLIUO12vPLMb05guju0oL
-jYkhkMm9o5MUN qjy/A48FgOqbz9bZ/lOvso76N  L4Hhb6MxSPtNnL5GMl7o7pk
-r8qPoVOKyc0AEQEAAYkCPAQYAQgAJhYhBMhmHm6U/60WKiqjdXWiNP I ZwaBQJf
-EmsQAhsMBQkHhh AAAoJEHWiNP I ZwaMZQQAJg6NCfHpvFfr9c8/odmt/zEXUpx
-42eB2tIFaTd/MSu5QI9rXuV6l2naC9dHBStPrpj2acCyvjeFfsxJ9VJjg3ToZH5B
-MJ2l2z28wkMiMhZw/mIPecLwEPyaYNY68 gM1XfBB4e3pmMdMdWMa5WZrC5WVwF 
-exn84KNqUSmKmkIfU/WC95CfyiVQYcjdj OstFJMSMeg54KZGLJsRPDnWM83HZOk
-WZ4yaiUBEExOI0maIMFm1pYH3n lE28IHPq1RZ0r0ci9WrU8uqwU8/T4r2H/1Yd1
-a7LsuO61ERI2N7AED9QtI9uH5U8d8dbatK0Xjf2F4Wc5ErRIDzTaS2MZh2aTYKY 
-BrBj7clRYzTf/LNeZv6okYkvxYPsudy4MPvjDijnHEsoUph7gx AFG6Co0V3onA/
-emH6M9uqUa5CqZ3qZ1N ePWVarevdgsmQwQj649toluk0F7gkZZboM/gqBhh4g9p
-V9wEOwAFNzdZTFd16YG/C3ZOpz9Dn8rYe0pq5dePS 4INr5aD6hjj4hDtV9nbzOM
-mkZ6xvnnyzHls4FOqcJRHgn4GPxwNo/y5Y9WDqAV6qZ6jpz8n1JZV9KxDjcq0 BI
-Mt0zmeZBXaX3/7LDS75dEYL2uCxVAqxftzIal6dF8hOEEJoRXOkgCKC1IY2 iH3J
-UOmZxPhE6x7ZQcKO
-=IkuM
------END PGP PUBLIC KEY BLOCK-----"
+# -----------------------------------------------------------------------------
+# Optional Features
+# -----------------------------------------------------------------------------
+
+enable_google_analytics:    false  # enables google analytics
+enable_panelbear_analytics: false  # enables panelbear analytics
+enable_google_verification: false  # enables google site verification
+enable_bing_verification:   false  # enables bing site verification
+enable_masonry:             true   # enables automatic project cards arangement
+enable_math:                true   # enables math typesetting (uses MathJax)
+enable_tooltips:            false  # enables automatic tooltip links generated
+                                   # for each section titles on pages and posts
+enable_darkmode:            true   # enables switching between light/dark modes
+enable_navbar_social:       false  # enables displaying social links in the
+                                   # navbar on the about page
+enable_project_categories:  true   # enables categorization of projects into
+                                   # multiple categories
+enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
+enable_progressbar:         true   # enables a horizontal progress bar linked to the vertical scroll position
+
+# -----------------------------------------------------------------------------
+# Library versions
+# -----------------------------------------------------------------------------
+
+academicons:
+  version: "1.9.1"
+  integrity: "sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg="
+bootstrap:
+  version: "4.6.1"
+  integrity:
+    css: "sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY="
+    js: "sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8="
+fontawesome:
+  version: "5.15.4"
+  integrity: "sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4="
+jquery:
+  version: "3.6.0"
+  integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+mathjax:
+  version: "3.2.0"
+masonry:
+  version: "4.2.2"
+  integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+mdb:
+  version: "4.20.0"
+  integrity:
+    css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+    js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+medium_zoom:
+  version: "1.0.8"
+  integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
